@@ -1,0 +1,13 @@
+fastapi==0.115.14
+uvicorn[standard]==0.35.0
+transformers==4.53.0
+tokenizers==0.21.2
+torch==2.7.1
+python-multipart==0.0.6
+pydantic==2.11.7
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+numpy>=2.0.2
+# Optimizations for Render deployment
+gunicorn==21.2.0 

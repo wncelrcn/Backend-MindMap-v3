@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mindmap-emotion-api
+    env: docker
+    plan: starter # Recommended for this model size
+    region: oregon # Choose your preferred region
+    buildCommand: docker build -t mindmap-emotion-api .
+    startCommand: docker run -p 10000:10000 mindmap-emotion-api
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHONUNBUFFERED
+        value: 1
+      - key: TRANSFORMERS_CACHE
+        value: /tmp/transformers_cache
+      - key: HF_HOME
+        value: /tmp/transformers_cache
+    # Auto-deploy from main branch
+    autoDeploy: true
