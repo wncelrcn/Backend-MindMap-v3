@@ -75,7 +75,7 @@ async def load_model_async():
         start_time = time.time()
         
         # Load the model and tokenizer with timeout handling
-        model_name = "wncelrcn/mindmap-deBERTa-small-goemotions-v2"
+        model_name = "wncelrcn/mindmap-MiniLM-goemotions-v1"
         
         logger.info("Loading tokenizer...")
         tokenizer = AutoTokenizer.from_pretrained(
@@ -141,7 +141,7 @@ async def health_check():
     return {
         "status": status,
         "model_status": model_status,
-        "model_name": "wncelrcn/mindmap-deBERTa-small-goemotions-v2",
+        "model_name": "wncelrcn/mindmap-MiniLM-goemotions-v1",
         "model_type": "multi-label emotion classification"
     }
 
